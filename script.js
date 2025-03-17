@@ -48,7 +48,7 @@ function loadNotes() {
 
 function editNote(id) {
     alert('Editar nota com ID: ' + id);
-    // Implementar a lógica de edição se necessário
+    
 }
 
 function deleteNote(id) {
@@ -59,5 +59,5 @@ function deleteNote(id) {
     loadNotes();
 }
 
-// Carregar as notas quando a página for carregada
+
 window.onload = loadNotes;
