@@ -4,19 +4,19 @@ document.getElementById('saveNote').addEventListener('click', function() {
     const note = document.getElementById('note').value;
 
     if (date && day && note) {
-        // Obter as notas salvas no localStorage
+        
         let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
-        // Adicionar a nova nota
+        
         const newNote = {
-            id: Date.now(),  // Utiliza timestamp como ID único
+            id: Date.now(),
             date: date,
             day: day,
             note: note
         };
         notes.push(newNote);
 
-        // Salvar as notas de volta no localStorage
+      
         localStorage.setItem('notes', JSON.stringify(notes));
 
         document.getElementById('message').innerText = "Nota salva com sucesso!";
@@ -30,7 +30,7 @@ function loadNotes() {
     const notesContainer = document.getElementById('notes');
     notesContainer.innerHTML = '';
 
-    // Carregar as notas salvas
+   
     const notes = JSON.parse(localStorage.getItem('notes')) || [];
     
     notes.forEach(note => {
