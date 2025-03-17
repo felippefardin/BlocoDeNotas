@@ -58,6 +58,4 @@ function deleteNote(id) {
     localStorage.setItem('notes', JSON.stringify(notes));
     loadNotes();
 }
-
-
 window.onload = loadNotes;
